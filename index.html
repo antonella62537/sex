@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Antonella Velez — OnlyFans</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --crimson: #00AFF0;
+    --crimson-light: #33c4ff;
+    --crimson-glow: #00d4ff;
+    --gold: #00AFF0;
+    --gold-light: #66d9ff;
+    --black: #0d0d1a;
+    --black-soft: #111122;
+    --black-card: #161628;
+    --black-border: #252540;
+    --white: #f0f4ff;
+    --white-dim: #8899cc;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ─── CUSTOM SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--crimson); border-radius: 2px; }
+
+  /* ─── NOISE OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('fotos/1.png');
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,175,240,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0,175,240,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 50% at 20% 20%, rgba(0,175,240,0.08) 0%, transparent 60%),
+      var(--black);
+    z-index: 0;
+  }
+
+  /* Animated soft petals */
+  .petal {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.12;
+    animation: floatPetal 8s ease-in-out infinite alternate;
+  }
+  .petal:nth-child(1) { background: #00AFF0; top: 10%; left: 5%; animation-delay: 0s; }
+  .petal:nth-child(2) { background: #0066cc; top: 60%; right: 5%; width: 200px; height: 200px; animation-delay: 3s; }
+  .petal:nth-child(3) { background: #00d4ff; bottom: 10%; left: 30%; animation-delay: 1.5s; opacity: 0.08; }
+
+  @keyframes floatPetal {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(20px, -30px) scale(1.1); }
+  }
+
+  .hero-tag {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-tag::before, .hero-tag::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  .hero-name {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: 300;
+    font-style: italic;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+    text-shadow: 0 0 60px rgba(0,175,240,0.35);
+  }
+  .hero-name span {
+    color: var(--crimson-glow);
+    display: block;
+  }
+
+  .hero-sub {
+    position: relative;
+    z-index: 1;
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    animation: fadeUp 1.2s ease 0.3s forwards;
+    opacity: 0;
+  }
+
+  .hero-cta {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 1.2s ease 0.6s forwards;
+    opacity: 0;
+  }
+
+  .btn-primary {
+    padding: 0.85rem 2.5rem;
+    background: var(--crimson);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary:hover { background: var(--crimson-light); box-shadow: 0 0 30px rgba(0,175,240,0.40); }
+
+  .btn-outline {
+    padding: 0.85rem 2.5rem;
+    background: transparent;
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(0,175,240,0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover { border-color: var(--gold); background: rgba(0,175,240,0.08); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white-dim);
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: fadeUp 1.2s ease 1s forwards;
+    opacity: 0;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--crimson), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+  }
+
+  /* ─── SECTION BASE ─── */
+  section {
+    padding: 6rem 2rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .section-label::after {
+    content: '';
+    display: block;
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 300;
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 2rem;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--crimson-glow);
+  }
+
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--crimson), transparent);
+    margin: 0;
+  }
+
+  /* ─── REGLAS DEL JUEGO ─── */
+  #reglas {
+    background: var(--black-soft);
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  #reglas .inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .reglas-intro {
+    font-size: 0.9rem;
+    line-height: 1.9;
+    color: var(--white-dim);
+    max-width: 600px;
+    margin-bottom: 4rem;
+  }
+
+  .reglas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+    background: var(--black-border);
+  }
+
+  .regla-card {
+    background: var(--black-card);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+  .regla-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--crimson), var(--gold));
+    transition: width 0.4s ease;
+  }
+  .regla-card:hover { background: #1a1a30; }
+  .regla-card:hover::after { width: 100%; }
+
+  .regla-number {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--crimson);
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .regla-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+  }
+
+  .regla-desc {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--white-dim);
+  }
+
+  .regla-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ─── RESEÑAS ─── */
+  #resenas {
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  #resenas .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .resenas-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .resenas-layout { grid-template-columns: 1fr; }
+  }
+
+  /* Upload zone */
+  .upload-zone {
+    border: 1px dashed rgba(0,175,240,0.35);
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(0,175,240,0.03);
+    position: relative;
+    overflow: hidden;
+  }
+  .upload-zone:hover {
+    border-color: var(--crimson-glow);
+    background: rgba(0,175,240,0.06);
+  }
+  .upload-zone input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  .upload-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .upload-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--white-dim);
+  }
+  .upload-sub {
+    font-size: 0.65rem;
+    color: rgba(200,191,181,0.5);
+    margin-top: 0.5rem;
+  }
+
+  /* Screenshot gallery */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    min-height: 300px;
+  }
+
+  .gallery-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    grid-column: 1/-1;
+  }
+
+  .gallery-item {
+    background: var(--black-card);
+    border: 1px solid var(--black-border);
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    color: rgba(200,191,181,0.3);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .gallery-item:hover { transform: scale(1.02); z-index: 2; }
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,175,240,0.50), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.75rem;
+  }
+  .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+
+  /* Testimonials */
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: var(--black-card);
+    border-left: 2px solid var(--crimson);
+    padding: 1.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .testimonial-card:hover {
+    border-left-color: var(--gold);
+    transform: translateX(4px);
+  }
+
+  .testimonial-quote {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testimonial-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--crimson), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--white);
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .testimonial-name {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--gold-light);
+    text-transform: uppercase;
+  }
+
+  .testimonial-date {
+    font-size: 0.6rem;
+    color: rgba(200,191,181,0.4);
+    margin-top: 0.15rem;
+  }
+
+  .stars {
+    position: absolute;
+    top: 1.75rem;
+    right: 1.75rem;
+    color: var(--gold);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Add testimonial form */
+  .add-testimonial {
+    background: rgba(0,175,240,0.05);
+    border: 1px solid rgba(0,175,240,0.20);
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .form-input, .form-textarea {
+    background: var(--black);
+    border: 1px solid var(--black-border);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    resize: none;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--crimson); }
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(200,191,181,0.3); }
+
+  .form-textarea { height: 80px; margin-bottom: 0.75rem; }
+
+  /* ─── SERVICIOS ─── */
+  #servicios {
+    background: var(--black-soft);
+  }
+
+  #servicios .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .servicios-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: end;
+    margin-bottom: 5rem;
+  }
+  @media (max-width: 768px) {
+    .servicios-header { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  .servicios-desc {
+    font-size: 0.85rem;
+    line-height: 1.9;
+    color: var(--white-dim);
+  }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    background: var(--black-border);
+  }
+
+  .servicio-card {
+    background: var(--black);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .servicio-card.featured {
+    background: linear-gradient(135deg, #0f1020, #141428);
+  }
+
+  .servicio-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--crimson), var(--gold));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+  }
+  .servicio-card:hover::before { transform: scaleX(1); }
+  .servicio-card:hover { background: #181830; }
+
+  .servicio-badge {
+    display: inline-block;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .servicio-badge.popular {
+    background: rgba(0,175,240,0.25);
+    border-color: var(--crimson);
+    color: #66d9ff;
+  }
+
+  .servicio-icon {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .servicio-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+  }
+
+  .servicio-desc {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--white-dim);
+    margin-bottom: 2rem;
+  }
+
+  .servicio-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .servicio-features li {
+    font-size: 0.75rem;
+    color: var(--white-dim);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .servicio-features li::before {
+    content: '◆';
+    font-size: 0.4rem;
+    color: var(--crimson-glow);
+    flex-shrink: 0;
+  }
+
+  .servicio-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-amount {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--white);
+  }
+
+  .price-currency {
+    font-size: 1rem;
+    color: var(--gold);
+    font-family: var(--font-display);
+  }
+
+  .price-period {
+    font-size: 0.7rem;
+    color: var(--white-dim);
+    letter-spacing: 0.1em;
+  }
+
+  /* ─── CONTACT / FOOTER ─── */
+  #contacto {
+    background: var(--black);
+    padding: 8rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #contacto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(0,175,240,0.10), transparent);
+  }
+
+  .contacto-inner {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contacto-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    text-shadow: 0 0 60px rgba(0,175,240,0.25);
+  }
+
+  .contacto-sub {
+    font-size: 0.8rem;
+    line-height: 1.9;
+    color: var(--white-dim);
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: 1px solid var(--black-border);
+    width: 100%;
+    max-width: 360px;
+    transition: all 0.3s ease;
+    background: var(--black-card);
+  }
+
+  .contact-link:hover {
+    border-color: var(--crimson);
+    background: rgba(0,175,240,0.10);
+    color: var(--white);
+  }
+
+  .contact-link-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-link-text { flex: 1; }
+
+  .contact-link-arrow {
+    font-size: 0.7rem;
+    color: var(--crimson-glow);
+    transition: transform 0.3s ease;
+  }
+  .contact-link:hover .contact-link-arrow { transform: translateX(4px); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--black);
+    border-top: 1px solid var(--black-border);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--white);
+  }
+
+  .footer-disclaimer {
+    font-size: 0.6rem;
+    color: rgba(200,191,181,0.3);
+    letter-spacing: 0.1em;
+    max-width: 500px;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.6rem;
+    color: rgba(200,191,181,0.2);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(13,13,26,0.92), transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  nav.scrolled {
+    background: rgba(13,13,26,0.97);
+    border-bottom: 1px solid var(--black-border);
+    padding: 1rem 2rem;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--crimson-glow);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover::after { width: 100%; }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+  }
+
+  /* ─── AGE GATE ─── */
+  .age-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .age-gate-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('fotos/1.png');
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.15;
+    z-index: 0;
+    filter: blur(1px);
+    transition: opacity 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 0;
+  }
+
+  .age-gate:hover .age-gate-bg {
+    opacity: 0.80;
+    filter: blur(0px);
+  }
+
+  /* Blue border glow on the age gate when hovered */
+  .age-gate-glow-border {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    box-shadow: inset 0 0 0px 0px rgba(0,175,240,0);
+    transition: box-shadow 0.5s ease;
+    border-radius: 0;
+  }
+
+  .age-gate:hover .age-gate-glow-border {
+    box-shadow:
+      inset 0 0 60px 8px rgba(0,175,240,0.25),
+      inset 0 0 120px 20px rgba(0,175,240,0.12);
+  }
+
+  /* Outer pulse ring on hover */
+  .age-gate-glow-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background:
+      linear-gradient(to bottom, rgba(0,175,240,0.15) 0%, transparent 30%, transparent 70%, rgba(0,175,240,0.15) 100%),
+      linear-gradient(to right,  rgba(0,175,240,0.15) 0%, transparent 30%, transparent 70%, rgba(0,175,240,0.15) 100%);
+    transition: opacity 0.5s ease;
+  }
+
+  .age-gate:hover .age-gate-glow-border::after {
+    opacity: 1;
+  }
+
+  .age-gate-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(13,13,26,0.55) 0%,
+      rgba(13,13,26,0.35) 40%,
+      rgba(13,13,26,0.65) 100%
+    );
+    z-index: 1;
+  }
+
+  /* Tap hint */
+  .tap-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(0,175,240,0.7);
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    animation: tapPulse 2s ease-in-out infinite;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .tap-hint-icon {
+    font-size: 1.1rem;
+    animation: tapBounce 1.5s ease-in-out infinite;
+  }
+
+  .age-gate.touch-active .tap-hint {
+    color: rgba(0,212,255,0.9);
+    animation: none;
+  }
+
+  @keyframes tapPulse {
+    0%, 100% { opacity: 0.4; }
+    50%       { opacity: 1; }
+  }
+
+  @keyframes tapBounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-4px); }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .tap-hint { display: none; }
+  }
+
+  /* Custom cursor glow — desktop */
+  .cursor-glow {
+    position: fixed;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,175,240,0.85) 0%, rgba(0,175,240,0.3) 50%, transparent 70%);
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear;
+    mix-blend-mode: screen;
+    display: none;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,175,240,0.5);
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+    mix-blend-mode: screen;
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .cursor-glow { display: block; }
+    .cursor-ring { display: block; }
+    .age-gate { cursor: none; }
+  }
+
+  /* Touch ripple — mobile */
+  .touch-ripple {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99997;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleBurst 0.6s ease-out forwards;
+    mix-blend-mode: screen;
+  }
+
+  /* Mobile: tap activates the glow */
+  .age-gate.touch-active .age-gate-bg {
+    opacity: 0.80;
+    filter: blur(0px);
+  }
+  .age-gate.touch-active .age-gate-glow-border {
+    box-shadow:
+      inset 0 0 60px 8px rgba(0,175,240,0.25),
+      inset 0 0 120px 20px rgba(0,175,240,0.12);
+  }
+  .age-gate.touch-active .age-gate-glow-border::after {
+    opacity: 1;
+  }
+
+  @keyframes rippleBurst {
+    0%   { width: 20px; height: 20px; opacity: 1; transform: translate(-50%, -50%) scale(0); background: radial-gradient(circle, rgba(0,212,255,0.9), rgba(0,175,240,0.4)); }
+    60%  { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+    100% { width: 80px; height: 80px; opacity: 0; transform: translate(-50%, -50%) scale(1); background: radial-gradient(circle, rgba(0,212,255,0), rgba(0,175,240,0)); }
+  }
+
+  .age-gate-inner {
+    max-width: 480px;
+  }
+
+  .age-gate-logo {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 40px rgba(0,175,240,0.40);
+  }
+
+  .age-gate-title {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.5rem;
+  }
+
+  .age-gate-text {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .age-gate-sub {
+    font-size: 0.75rem;
+    color: var(--white-dim);
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  .age-gate-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .age-exit {
+    font-size: 0.65rem;
+    color: rgba(200,191,181,0.3);
+    margin-top: 2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hidden { display: none !important; }
+
+  /* Ornament divider */
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    color: rgba(0,175,240,0.25);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+  }
+  .ornament::before, .ornament::after {
+    content: '──────';
+    color: rgba(0,175,240,0.20);
+    letter-spacing: -0.1em;
+  }
+
+  /* Stat bar */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: rgba(0,175,240,0.07);
+    border: 1px solid rgba(0,175,240,0.15);
+    max-width: 700px;
+    margin: 3rem auto 0;
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-right: 1px solid rgba(0,175,240,0.15);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--crimson-glow);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white-dim);
+    margin-top: 0.25rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    section { padding: 4rem 1.25rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .servicios-grid { grid-template-columns: 1fr; }
+    .reglas-grid { grid-template-columns: 1fr; }
+    .stats-bar { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(0,175,240,0.15); }
+    .stat-item:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- AGE GATE -->
+<div class="age-gate" id="ageGate">
+  <div class="age-gate-bg"></div>
+  <div class="age-gate-overlay"></div>
+  <div class="age-gate-glow-border"></div>
+  <div class="tap-hint" id="tapHint">
+    <span class="tap-hint-icon">👆</span>
+    <span class="tap-hint-text">Toca mi culo hermoso</span>
+  </div>
+  <div class="age-gate-inner" style="position:relative;z-index:2;">
+    <div class="age-gate-logo">Antonella Velez</div>
+    <div class="age-gate-title">✦ Contenido Exclusivo para Adultos ✦</div>
+    <div class="age-gate-text">Este sitio contiene material<br>para mayores de 18 años</div>
+    <div class="age-gate-sub">Al ingresar confirmas que tienes 18 años o más y que es legal en tu país acceder a este tipo de contenido. Todo el contenido es consensuado.</div>
+    <div class="age-gate-buttons">
+      <button class="btn-primary" onclick="enterSite()">Soy mayor de 18 años — Entrar</button>
+      <a class="btn-outline" href="https://www.google.com">Salir</a>
+    </div>
+    <div class="age-exit">Al continuar aceptas los términos y condiciones</div>
+  </div>
+  </div>
+</div>
+
+<!-- CURSOR GLOW (desktop) -->
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-logo">Antonella Velez ✦</a>
+  <ul class="nav-links">
+    <li><a href="#reglas">Reglas</a></li>
+    <li><a href="#resenas">Reseñas</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto" class="btn-primary" style="padding:0.5rem 1.25rem; font-size:0.6rem;">Contáctame</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
+  <div class="hero-tag">✦ Contenido Exclusivo &amp; Premium</div>
+  <h1 class="hero-name">
+    Antonella<span>Velez</span>
+  </h1>
+  <p class="hero-sub">Tu fantasía hecha realidad · Contenido 100% auténtico · Solo para adultos</p>
+  <div class="hero-cta">
+    <a href="#servicios" class="btn-primary">Ver mis servicios</a>
+    <a href="#resenas" class="btn-outline">Leer reseñas</a>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">Clientes felices</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">Contenido real</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">24h</span>
+      <span class="stat-label">Respuesta máx.</span>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Descubre más</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══ REGLAS DEL JUEGO ══ -->
+<section id="reglas">
+  <div class="inner">
+    <div class="section-label">01 · Antes de empezar</div>
+    <h2 class="section-title">Las Reglas<br><em>del Juego</em></h2>
+    <p class="reglas-intro">Para que todo fluya de manera perfecta y podamos disfrutar juntos de la mejor experiencia, es importante que leas estas condiciones antes de contactarme. Mi comodidad y la tuya son prioridad.</p>
+
+    <div class="reglas-grid">
+
+      <div class="regla-card">
+        <div class="regla-icon">💳</div>
+        <div class="regla-number">01</div>
+        <div class="regla-title">Pago primero, siempre</div>
+        <div class="regla-desc">Todo servicio o contenido es pagado por adelantado sin excepción. No hay excepciones, no hay "te pago después". Una vez recibido el pago, comienzo a trabajar en tu pedido de inmediato.</div>
+      </div>
+
+     
+
+      <div class="regla-card">
+        <div class="regla-icon">🚫</div>
+        <div class="regla-number">02</div>
+        <div class="regla-title">Cero difusión no autorizada</div>
+        <div class="regla-desc">El contenido es para tu uso personal y privado. Compartir, revender o publicar el material en cualquier plataforma sin mi autorización es una violación seria y tomará acciones legales.</div>
+      </div>
+
+      <div class="regla-card">
+        <div class="regla-icon">✅</div>
+        <div class="regla-number">03</div>
+        <div class="regla-title">Soy mayor de edad</div>
+        <div class="regla-desc">Todo mi contenido es producido por y para mayores de 18 años. Al adquirir cualquier servicio confirmas que eres mayor de edad en tu país de residencia.</div>
+      </div>
+
+      <div class="regla-card">
+        <div class="regla-icon">💬</div>
+        <div class="regla-number">04</div>
+        <div class="regla-title">Trato respetuoso</div>
+        <div class="regla-desc">Exijo trato educado y respetuoso. Mensajes irrespetuosos, agresivos o que me hagan sentir incómoda serán bloqueados.</div>
+      </div>
+
+      <div class="regla-card">
+        <div class="regla-icon">⏱️</div>
+        <div class="regla-number">05</div>
+        <div class="regla-title">Tiempos de entrega</div>
+        <div class="regla-desc">Los tiempos de entrega de contenido apenas se confirme el pago, se entrega el contenido.</div>
+      </div>
+
+      <div class="regla-card">
+        <div class="regla-icon">🌹</div>
+        <div class="regla-number">06</div>
+        <div class="regla-title">Discreción total</div>
+        <div class="regla-desc">Tu privacidad es sagrada para mí. Nunca comparto datos personales de clientes ni historial de conversaciones. Lo que pasa entre nosotros, queda entre nosotros.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══ RESEÑAS ══ -->
+<section id="resenas">
+  <div class="inner">
+    <div class="section-label">02 · Lo que dicen</div>
+    <h2 class="section-title">Ultimas Reseñas<br><em></em></h2>
+
+    <div class="resenas-layout">
+
+
+      <!-- Testimonios escritos -->
+      <div>
+
+
+         <p style="font-size:0.75rem; color:var(--white-dim); margin-bottom:1.5rem; line-height:1.8;">
+          Evidencia de clientes satisfechos.
+        </p>
+        <div class="testimonials" id="testimonialsList">
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div><br>
+            <div class="testimonial-quote">"Superó completamente mis expectativas. El contenido fue exactamente lo que pedí y la atención fue increíble desde el primer mensaje."</div>
+            <div class="testimonial-meta">
+              <div class="testimonial-avatar">A</div>
+              <div>
+                <div class="testimonial-name">@Carlosandre_salguero</div>
+                <div class="testimonial-date">04 de abril 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div><br>
+            <div class="testimonial-quote">"La mejor inversión que he hecho. El trato fue muy cálido, profesional y el resultado final... 10/10 sin duda alguna."</div>
+            <div class="testimonial-meta">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <div class="testimonial-name">@teto_lazco</div>
+                <div class="testimonial-date">04 de abril 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div><br>
+            <div class="testimonial-quote">"Rápida, discreta y muy profesional. Ya llevo varios pedidos y siempre quedo más satisfecho que la vez anterior."</div>
+            <div class="testimonial-meta">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <div class="testimonial-name">@ernesto_lopez</div>
+                <div class="testimonial-date">04 de abril 2026</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+   
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament">✦</div>
+
+<!-- ══ SERVICIOS ══ -->
+<section id="servicios">
+  <div class="inner">
+    <div class="servicios-header">
+      <div>
+        <div class="section-label">03 · Lo que ofrezco</div>
+        <h2 class="section-title">Mis<br><em>Servicios</em></h2>
+      </div>
+      <div class="servicios-desc">
+        Cada experiencia está diseñada para ser única, personal e íntima. Me adapto a tus deseos dentro de mis condiciones. La calidad, autenticidad y tu satisfacción son mi prioridad absoluta.
+      </div>
+    </div>
+
+    <div class="servicios-grid">
+
+      <!-- Pack Básico -->
+      <div class="servicio-card">
+        <div class="servicio-badge">Starter</div>
+        <div class="servicio-icon">📸</div>
+        <div class="servicio-title">Pack<br>de Fotos</div>
+        <div class="servicio-desc">Colección de imágenes exclusivas, nunca publicadas, solo para ti.</div>
+        <ul class="servicio-features">
+          <li>15 fotos desnuda exclusivas</li>
+          <li>Calidad HD</li>
+          <li>Entrega inmediata despues de confirmado el pago</li>
+          <li>Uso personal</li>
+        </ul>
+        <div class="servicio-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">13</span>
+          <span class="price-period">USD · pago único</span>
+        </div>
+        <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Quiero este pack</a>
+      </div>
+
+      <!-- Video -->
+      <div class="servicio-card featured">
+        <div class="servicio-badge popular">⚡ Más popular</div>
+        <div class="servicio-icon">🎬</div>
+        <div class="servicio-title">Videos</div>
+        <div class="servicio-desc">Un video mostrandome totalmente desnuda, mostrando lo sexy que estoy.</div>
+        <ul class="servicio-features">
+          <li>5 Videos exclusivos</li>
+          <li>Duración: hasta 10 minutos</li>
+          <li>Audio y video HD</li>
+          <li>Entrega inmediata despues de confirmado el pago</li>
+          <li>1 detalla extra</li>
+        </ul>
+        <div class="servicio-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">15</span>
+          <span class="price-period">USD · pago único</span>
+        </div>
+        <a href="#contacto" class="btn-primary" style="display:block; text-align:center;">Pedir mi video</a>
+      </div>
+
+
+      <!-- Chat / Suscripción -->
+      <div class="servicio-card">
+        <div class="servicio-badge">Mensual</div>
+        <div class="servicio-icon">💌</div>
+        <div class="servicio-title">Suscripción<br>VIP</div>
+        <div class="servicio-desc">Acceso mensual a contenido.</div>
+        <ul class="servicio-features">
+          <li>Contenido nuevo todos los dias</li>
+          <li>Chat privado</li>
+          <li>Contenido exclusivo de suscriptores</li>
+        </ul>
+        <div class="servicio-price">
+          <span class="price-currency">$</span>
+          <span class="price-amount">20</span>
+          <span class="price-period">USD · al mes</span>
+        </div>
+        <a href="#contacto" class="btn-outline" style="display:block; text-align:center;">Suscribirme</a>
+      </div>
+
+    </div>
+
+    <!-- Nota personalizada -->
+    <div style="margin-top:3rem; background:rgba(0,175,240,0.06); border:1px solid rgba(0,175,240,0.20); padding:2rem; text-align:center; max-width:600px; margin-left:auto; margin-right:auto;">
+      <div style="font-family:var(--font-display); font-size:1.2rem; font-style:italic; color:var(--white); margin-bottom:0.75rem;">¿Tienes una idea especial?</div>
+      <p style="font-size:0.8rem; color:var(--white-dim); line-height:1.8; margin-bottom:1.5rem;">Si tienes algo más específico en mente que no esté en mi lista, escríbeme. Me encanta crear experiencias únicas y personalizadas.</p>
+      <a href="#contacto" class="btn-primary" style="font-size:0.65rem;">Cuéntame tu fantasía</a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ══ CONTACTO ══ -->
+<section id="contacto">
+  <div class="contacto-inner">
+    <div class="section-label" style="justify-content:center;">04 · Hablemos</div>
+    <h2 class="contacto-title">¿Listo para<br><em>comenzar?</em></h2>
+    <p class="contacto-sub">Estoy aquí y lista para hacerte vivir una experiencia que no olvidarás. Escríbeme por tu plataforma favorita y comenzamos.</p>
+
+    <div class="contact-links">
+      <a href="https://wa.me/+12067460816" target="_blank" class="contact-link">
+        <span class="contact-link-icon">💬</span>
+        <span class="contact-link-text">WhatsApp · Mensaje directo</span>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://t.me/antonellavelez" target="_blank" class="contact-link">
+        <span class="contact-link-icon">✈️</span>
+        <span class="contact-link-text">Telegram · Grupo free</span>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://www.facebook.com/share/19jW6Wdsay/" target="_blank" class="contact-link">
+        <span class="contact-link-icon">🔞</span>
+        <span class="contact-link-text">Facebook · Sigueme</span>
+        <span class="contact-link-arrow">→</span>
+      </a>
+      <a href="https://www.instagram.com/antonellavelez9715?igsh=d2IwOXZ5N20wOGgy" target="_blank" class="contact-link">
+        <span class="contact-link-icon">📷</span>
+        <span class="contact-link-text">Instagram · Mensajes</span>
+        <span class="contact-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Antonella Velez ✦</div>
+    <div class="footer-disclaimer">
+      Este sitio contiene material explícito para adultos. Al acceder confirmas que tienes 18 años o más y que el acceso a este tipo de contenido es legal en tu jurisdicción. Todo el contenido es producido de manera consensuada por adultos mayores de edad.
+    </div>
+    <div class="footer-bottom">© 2025 Antonella Velez · Contenido Exclusivo · Todos los derechos reservados</div>
+  </div>
+</footer>
+
+<script>
+  // Age Gate
+  function enterSite() {
+    document.getElementById('ageGate').style.opacity = '0';
+    document.getElementById('ageGate').style.transition = 'opacity 0.6s ease';
+    setTimeout(() => document.getElementById('ageGate').classList.add('hidden'), 600);
+  }
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('mainNav');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Image upload gallery
+  function handleUpload(event) {
+    const files = Array.from(event.target.files);
+    const grid = document.getElementById('galleryGrid');
+    files.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item';
+        item.innerHTML = `
+          <img src="${e.target.result}" alt="Pantallazo" loading="lazy" />
+          <div class="gallery-item-overlay"></div>
+        `;
+        grid.appendChild(item);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // Add testimonial
+  function addTestimonial() {
+    const name = document.getElementById('reviewName').value.trim();
+    const date = document.getElementById('reviewDate').value.trim();
+    const text = document.getElementById('reviewText').value.trim();
+    if (!name || !text) {
+      alert('Por favor completa al menos el nombre y la reseña.');
+      return;
+    }
+    const initial = name.charAt(0).toUpperCase();
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+    card.style.animation = 'fadeUp 0.5s ease forwards';
+    card.innerHTML = `
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-quote">"${text}"</div>
+      <div class="testimonial-meta">
+        <div class="testimonial-avatar">${initial}</div>
+        <div>
+          <div class="testimonial-name">${name}</div>
+          <div class="testimonial-date">${date || 'Reciente'}</div>
+        </div>
+      </div>
+    `;
+    document.getElementById('testimonialsList').prepend(card);
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewDate').value = '';
+    document.getElementById('reviewText').value = '';
+  }
+
+  // Smooth reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.regla-card, .servicio-card, .testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+
+  // ── DESKTOP CURSOR GLOW ──────────────────────────────────────────────────
+  const glow = document.getElementById('cursorGlow');
+  const ring = document.getElementById('cursorRing');
+  let ringX = 0, ringY = 0, curX = 0, curY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    curX = e.clientX; curY = e.clientY;
+    glow.style.left = curX + 'px';
+    glow.style.top  = curY + 'px';
+  });
+
+  // Ring follows with lag
+  function animateRing() {
+    ringX += (curX - ringX) * 0.15;
+    ringY += (curY - ringY) * 0.15;
+    ring.style.left = ringX + 'px';
+    ring.style.top  = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Pulse on click (desktop)
+  document.addEventListener('mousedown', () => {
+    glow.style.transform = 'translate(-50%, -50%) scale(2.5)';
+    glow.style.opacity = '0.5';
+    ring.style.width = '70px'; ring.style.height = '70px'; ring.style.opacity = '0.2';
+    setTimeout(() => {
+      glow.style.transform = 'translate(-50%, -50%) scale(1)';
+      glow.style.opacity = '1';
+      ring.style.width = '48px'; ring.style.height = '48px'; ring.style.opacity = '1';
+    }, 300);
+  });
+
+  // ── MOBILE TOUCH RIPPLE ──────────────────────────────────────────────────
+  // Mobile: tap age-gate TOGGLES glow on/off
+  const ageGateEl = document.getElementById('ageGate');
+  let glowOn = false;
+
+  ageGateEl && ageGateEl.addEventListener('touchend', (e) => {
+    // Don't toggle if tapping a button
+    if (e.target.closest('button') || e.target.closest('a')) return;
+    glowOn = !glowOn;
+    if (glowOn) {
+      ageGateEl.classList.add('touch-active');
+    } else {
+      ageGateEl.classList.remove('touch-active');
+    }
+    e.preventDefault();
+  }, { passive: false });
+
+  document.addEventListener('touchstart', (e) => {
+    Array.from(e.changedTouches).forEach(touch => {
+      const ripple = document.createElement('div');
+      ripple.className = 'touch-ripple';
+      ripple.style.left = touch.clientX + 'px';
+      ripple.style.top  = touch.clientY + 'px';
+      document.body.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  }, { passive: true });
+</script>
+
+</body>
+</html>
